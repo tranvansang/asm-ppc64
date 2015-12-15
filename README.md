@@ -124,7 +124,6 @@ Useful references
 
 - Type’s size
 
-
 |Type|Size (bit)|
 |----|:----------:|
 |Byte|8|
@@ -132,6 +131,43 @@ Useful references
 |Word | 32|
 |Double word | 64|
 |Quad word | 128|
+
+##Programming practise
+
+- Use macro.
+
+There are 2 styles of macro
+
+	+ Apple’s style: using `.macro` and `.endmacro`, supports 10 parameters: `$0` to `$9`, with number of arguments is `$n`
+
+	+ GNU’s style: using `.macro <argument list>` and `.endm`
+
+	+ Combine with `.if`, `.else`, `.endif` for more efficiency.
+
+	+ See `lib.s` for more useful macros.
+
+	+ Example:
+
+```asm
+
+```
+
+- Use constant with meaningful name
+
+For example:
+
+```asm
+.set param_area, 48
+#or
+frame_size = 112
+```
+
+- Use comment:
+
+```asm
+# This style
+; or this style
+```
 
 ## Document
 
@@ -142,6 +178,8 @@ Useful references
 - [Using `isel`, `fsel` to reduce number of branch instruction][isel-doc]
 
 - [Short list of instructions and usage][summary]
+
+- Recommended [book](http://physinfo.ulb.ac.be/divers_html/powerpc_programming_info/intro_to_ppc/ppc0_index.html) for self-paced learning. (deep understanding)
 
 
 [apple-calling-convention]: https://developer.apple.com/library/mac/documentation/DeveloperTools/Conceptual/LowLevelABI/110-64-bit_PowerPC_Function_Calling_Conventions/64bitPowerPC.html#//apple_ref/doc/uid/TP40002471-SW13
