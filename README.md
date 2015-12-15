@@ -2,10 +2,9 @@
 
 ##Host info
 
-```
-uname -a:
-Linux csp 2.6.32.36-0.5-ppc64 #1 SMP 2011-04-14 10:12:31 +0200 ppc64 ppc64 ppc64 GNU/Linux
-```
+`uname -a`’s result:
+
+> Linux csp 2.6.32.36-0.5-ppc64 #1 SMP 2011-04-14 10:12:31 +0200 ppc64 ppc64 ppc64 GNU/Linux
 
 ###GCC compiling
 
@@ -57,9 +56,9 @@ Use `pearlpc` from [here](http://www.mediafire.com/download/7vhn1l49405jfcr/MacO
 
 	+ List supported architecture in current Mac:
 
-```bash
-ls /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/libexec/as/
-```
+	```bash
+	ls /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/libexec/as/
+	```
 
 	+ Then compile with `as <input file.c> arch <arch-name>`
 
