@@ -135,7 +135,7 @@ Useful references
 
 - Use macro.
 
-There are 2 styles of macro
+	There are 2 styles of macro
 
 	+ Apple’s style: using `.macro` and `.endmacro`, supports 10 parameters: `$0` to `$9`, with number of arguments is `$n`
 
