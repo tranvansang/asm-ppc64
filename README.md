@@ -159,13 +159,15 @@ For example:
 .set param_area, 48
 #or
 frame_size = 112
+.set my_arg, 3 #%r3
+sp = 1 #%r1
+stw my_arg, param_area(sp)
 ```
 
 - Use comment:
 
 ```asm
-# This style
-; or this style
+# This is a comment
 ```
 
 ## Document
@@ -176,7 +178,7 @@ frame_size = 112
 
 - [Using `isel`, `fsel` to reduce number of branch instruction][isel-doc]
 
-- [Short list of instructions and usage][summary]
+- [Short list of instructions and usage][sumary]
 
 - Recommended [book](http://physinfo.ulb.ac.be/divers_html/powerpc_programming_info/intro_to_ppc/ppc0_index.html) for self-paced learning. (deep understanding)
 
