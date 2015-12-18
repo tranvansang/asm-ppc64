@@ -4,11 +4,11 @@ Support `%d`, `%s`, `%%`, `%c` format.
 
 Basic subroutines:
 
-	- `print_s(char)`: print a char
+- `print_s(char)`: print a char
 
-	- `print_d(int)`: print an integer
+- `print_d(int)`: print an integer
 
-	- `print_s(char*)`: print a string
+- `print_s(char*)`: print a string
 
 Note:
 
