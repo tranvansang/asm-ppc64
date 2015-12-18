@@ -27,6 +27,22 @@ run
 layout asm
 ```
 
+- Break at address: `break *<label name>+<offset>`
+
+- Continue: `c`
+
+- Step: `stepi`
+
+- Show register value: `info reg [reg name]`
+
+- Print in binary format:
+
+	+ `p /t $r3`: print register `r3` in binary format
+
+	+ `x /t $r3`: examine
+
+	+ `p (char)*0xffff0122`: print memory at ... as char value
+
 ##Disassembler object file
 
 - On Mac: `otool -tV`
@@ -131,6 +147,8 @@ Useful references
 |Double word | 64|
 |Quad word | 128|
 
+- In function is directed called from `main`, parameter list is not saved in linkage area (offset 48 from stack pointer)
+
 ##Programming practise
 
 - Use macro.
@@ -167,7 +185,10 @@ stw my_arg, param_area(sp)
 - Use comment:
 
 ```asm
-# This is a comment
+# GNU comment style
+; Apple comment style
+// Apple comment style
+/* Another GNU comment style */
 ```
 
 ## Document
@@ -180,7 +201,9 @@ stw my_arg, param_area(sp)
 
 - [Short list of instructions and usage][sumary]
 
-- Recommended [book](http://physinfo.ulb.ac.be/divers_html/powerpc_programming_info/intro_to_ppc/ppc0_index.html) for self-paced learning. (deep understanding)
+- [A deep understanding book](http://physinfo.ulb.ac.be/divers_html/powerpc_programming_info/intro_to_ppc/ppc0_index.html)
+
+- GNU assembler syntax reference manual: [official](https://sourceware.org/binutils/docs/as/), or [mirror](http://tigcc.ticalc.org/doc/gnuasm.html)
 
 
 [apple-calling-convention]: https://developer.apple.com/library/mac/documentation/DeveloperTools/Conceptual/LowLevelABI/110-64-bit_PowerPC_Function_Calling_Conventions/64bitPowerPC.html#//apple_ref/doc/uid/TP40002471-SW13
